@@ -57,6 +57,11 @@ class Artwork: NSObject, MKAnnotation {
         }
     }
     
+    var imageName: String? {
+        if discipline == "Sculpture" { return "Statue" }
+        return "Flag"
+    }
+    
     // Annotation right callout accessory opens this mapItem in Maps app
     func mapItem() -> MKMapItem {
         let addressDict = [CNPostalAddressStreetKey: subtitle!]
