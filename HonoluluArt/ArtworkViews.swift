@@ -27,3 +27,20 @@ class ArtworkMarkerView: MKMarkerAnnotationView {
         }
     }
 }
+
+class ArtworkView: MKAnnotationView {
+    override var annotation: MKAnnotation? {
+        willSet {
+            guard let artwork = newValue as? Artwork else {return}
+            canShowCallout = true
+            calloutOffset = CGPoint(x: -5, y: 5)
+            rightCalloutAccessoryView = UIButton(type: .detailDisclosure)
+            
+            if let imageName = artwork.imageName {
+                image = UIImage(named: imageName)
+            } else {
+                image = nil
+            }
+        }
+    }
+}
