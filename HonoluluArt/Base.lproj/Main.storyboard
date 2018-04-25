@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HonoluluArt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="HQM-y2-Rgc">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HQM-y2-Rgc" firstAttribute="top" secondItem="nrU-2t-sc3" secondAttribute="top" id="ENC-IB-9F3"/>
+                            <constraint firstItem="HQM-y2-Rgc" firstAttribute="leading" secondItem="nrU-2t-sc3" secondAttribute="leading" id="GpR-Du-ujq"/>
+                            <constraint firstItem="nrU-2t-sc3" firstAttribute="bottom" secondItem="HQM-y2-Rgc" secondAttribute="bottom" id="R5h-Qm-8M1"/>
+                            <constraint firstItem="nrU-2t-sc3" firstAttribute="trailing" secondItem="HQM-y2-Rgc" secondAttribute="trailing" id="Uul-xF-vE9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nrU-2t-sc3"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="HQM-y2-Rgc" id="v40-PC-Amd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
