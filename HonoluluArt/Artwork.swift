@@ -41,6 +41,22 @@ class Artwork: NSObject, MKAnnotation {
         return locationName
     }
     
+    // markerTintColor for disciplines: Sculpture, Plaque, Mural, Monument, other
+    var markerTintColor: UIColor  {
+        switch discipline {
+        case "Monument":
+            return .red
+        case "Mural":
+            return .cyan
+        case "Plaque":
+            return .blue
+        case "Sculpture":
+            return .purple
+        default:
+            return .green
+        }
+    }
+    
     // Annotation right callout accessory opens this mapItem in Maps app
     func mapItem() -> MKMapItem {
         let addressDict = [CNPostalAddressStreetKey: subtitle!]
