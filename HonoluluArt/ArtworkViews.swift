@@ -44,6 +44,12 @@ class ArtworkView: MKAnnotationView {
             } else {
                 image = nil
             }
+            
+            let detailLabel = UILabel()
+            detailLabel.numberOfLines = 0
+            detailLabel.font = detailLabel.font.withSize(12)
+            detailLabel.text = artwork.subtitle
+            detailCalloutAccessoryView = detailLabel
         }
     }
 }
